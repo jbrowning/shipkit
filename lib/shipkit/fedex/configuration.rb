@@ -1,7 +1,7 @@
 module Shipkit
   module Fedex
     class Configuration
-      attr_accessor :account, :password, :meter, :key, :test
+      attr_accessor :account_number, :password, :meter_number, :key, :test
 
       def initialize
         self.test = false

@@ -10,15 +10,15 @@ describe Shipkit::Fedex::Configuration do
     end
   end
 
-  describe "account" do
+  describe "account_number" do
     it "defaults to nil" do
-      expect(subject.account).to be_nil
+      expect(subject.account_number).to be_nil
     end
 
     it "retains a new value" do
       new_value = "1234"
-      subject.account = new_value
-      expect(subject.account).to eql(new_value)
+      subject.account_number = new_value
+      expect(subject.account_number).to eql(new_value)
     end
   end
 
@@ -34,15 +34,15 @@ describe Shipkit::Fedex::Configuration do
     end
   end
 
-  describe "meter" do
+  describe "meter_number" do
     it "defaults to nil" do
-      expect(subject.meter).to be_nil
+      expect(subject.meter_number).to be_nil
     end
 
     it "retains a new value" do
       new_value = "1234"
-      subject.meter = new_value
-      expect(subject.meter).to eql(new_value)
+      subject.meter_number = new_value
+      expect(subject.meter_number).to eql(new_value)
     end
   end
 
