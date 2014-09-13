@@ -10,12 +10,14 @@ describe Shipkit::Fedex::Request do
 
     it "adds the key" do
       key = Shipkit::Fedex.config.key
-      expect(subject.search("UserCredential > Key").first.content).to eql(key)
+      selector = "/WebAuthenticationDetail/UserCredential/Key"
+      expect(subject.search(selector).first.text).to eql(key)
     end
     
     it "adds the password" do
       password = Shipkit::Fedex.config.password
-      expect(subject.search("UserCredential > Password").first.content).to eql(password)
+      selector = "/WebAuthenticationDetail/UserCredential/Password"
+      expect(subject.search(selector).first.text).to eql(password)
     end
   end
 
@@ -24,12 +26,14 @@ describe Shipkit::Fedex::Request do
 
     it "adds the account number" do
       account_number = Shipkit::Fedex.config.account_number
-      expect(subject.search("ClientDetail > AccountNumber").first.content).to eql(account_number)
+      selector = "/ClientDetail/AccountNumber"
+      expect(subject.search(selector).first.text).to eql(account_number)
     end
     
     it "adds the meter number" do
       meter_number = Shipkit::Fedex.config.meter_number
-      expect(subject.search("ClientDetail > MeterNumber").first.content).to eql(meter_number)
+      selector = "/ClientDetail/MeterNumber"
+      expect(subject.search(selector).first.text).to eql(meter_number)
     end
   end
 end
