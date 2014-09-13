@@ -1,5 +1,6 @@
 require "shipkit/fedex/configuration"
 require "shipkit/fedex/request"
+require "shipkit/fedex/track_request"
 
 module Shipkit
   module Fedex
