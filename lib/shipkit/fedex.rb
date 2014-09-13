@@ -1,4 +1,5 @@
 require "shipkit/fedex/configuration"
+require "shipkit/fedex/request"
 
 module Shipkit
   module Fedex

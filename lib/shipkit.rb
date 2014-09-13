@@ -1,3 +1,4 @@
+require "builder"
 require "shipkit/version"
 require "shipkit/configuration"
 require "shipkit/fedex"
