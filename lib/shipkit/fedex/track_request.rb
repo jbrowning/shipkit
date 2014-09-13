@@ -10,17 +10,17 @@ module Shipkit
       end
 
       def track_request
-        doc.TrackRequest do
+        doc.TrackRequest {
           doc << web_authentication_detail
           doc << client_detail
-          doc.SelectionDetails do
+          doc.SelectionDetails {
             doc.CarrierCode(carrier_code)
-            doc.PackageIdentifier do
+            doc.PackageIdentifier {
               doc.Type(type)
               doc.Value(tracking_number)
-            end
-          end
-        end
+            }
+          }
+        }
       end
 
       def request
